@@ -1,0 +1,39 @@
+<tbody>
+    @foreach($ingredientsRecipe as $key => $line)
+    <tr>
+
+
+        <td>{{$key+1}}</td>
+        <td>{{ $line->recipe->recipe_code }}</td>
+        <td>{{ $line->recipe->recipe_code }}</td>
+        <td>{{ $line->recipe->recipe_name }} </td>
+        <td>{{$line->ingredient_recipe_name}}</td>
+        <td>{{ $line->recipe->week }} </td>
+        <td>
+
+            <!-- ID DE LA RECETA -->
+            <input type="hidden" class="form-control p-3 mb-2 bg-light text-dark" name="lines_checks_name_recipe_id "
+                value=" " readonly>
+            <!-- ID DEL INGREDIENTE DE LA RECETA -->
+            <input type="hidden" class="form-control p-3 mb-2 bg-light text-dark" id="id" value=" " readonly>
+            <input class="form-check-input justify-content-md-end" type="checkbox" value="" id="flexCheckIndeterminate">
+            <label class="form-check-label" for="flexCheckIndeterminate">
+
+            </label>
+
+        </td>
+
+        <td>
+            <input type="number" pattern="[0-9.]{1,}" class="form-control col-md-3" id="validationDefault02" value=""
+                placeholder="Insert data " required>
+        </td>
+
+        <td>
+            <input type="number" pattern="[0-9.]{1,}" class="form-control col-md-3" id="validationDefault02" value=""
+                placeholder="Insert data " required>
+        </td>
+    </tr>
+
+
+    @endforeach
+</tbody>
